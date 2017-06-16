@@ -6,18 +6,57 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
 <style>
-body,h1 {font-family: "Ewert", cursive; color: yellow;}
-body, html {height: 100%}
+body,h1 {font-family: "Ewert", cursive; color: yellow;
+z-index: 999;}
+body, html {height: 100%;
+z-index: 998;}
 .bgimg {
     background-image: url('room.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
+    z-index: 3;
 }
 /*p {
   text-align: center;
   font-size: 100px;
 }*/
+.move {
+    width: 100px;
+    height: 75px;
+/*    background-color: red;
+    font-weight: bold;
+*/    position: relative;
+    -webkit-animation: mymove 10s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 10s infinite;
+    z-index: 1;
+}
+
+/* Safari 4.0 - 8.0 */
+#div1 {-webkit-animation-timing-function: linear;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease-in;}
+#div4 {-webkit-animation-timing-function: ease-out;}
+#div5 {-webkit-animation-timing-function: ease-in-out;}
+
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
 </style>
 <body>
 
@@ -25,11 +64,18 @@ body, html {height: 100%}
   <div class="w3-display-topleft w3-padding-large w3-lime w3-xlarge">
     Slack or Email Any Questions to me apekearo@gmail.com
   </div>
+  <br>
   <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-center w3-amber w3-animate-top" style="color: yellow;">1502 Waller 7pm Sept30th</h1>
+    <h1 class="w3-jumbo w3-center w3-amber w3-animate-top" style="color: yellow;">1502 Waller 7pm Sept 30th</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
+    
     <p class="w3-xxlarge w3-center w3-deep-orange" id="demo" style="color: yellow;"></p>
   </div>
+  <div id="div1"></div>
+<div class= "move" id="div2"></div>
+<div class= "move" id="div3"><img src="band3.jpg" width="160" height="140"></div>
+<div class= "move" id="div4"></div>
+<div class= "move" id="div5"><img src="band4.00_jpg_srz" width="160" height="140"></div>
   <div class="w3-display-bottomleft w3-padding-large">
   
     <iframe class="w3-grayscale-max" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.649350360013!2d-97.73199022062946!3d30.275570614661415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5bd46aa303f%3A0x8513b9eae144e36d!2s1502+Waller+St%2C+Austin%2C+TX+78702!5e0!3m2!1sen!2sus!4v1497475049009" width="265" height="265" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -54,7 +100,7 @@ var x = setInterval(function() {
   
     
     // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "<br>days<br> " + hours + "<br>hours ";
+    document.getElementById("demo").innerHTML = days + "<br>days<br> " + hours + "<br>hours " + "<br>Away!!";
     
     // If the count down is over, write some text 
     if (distance < 0) {
