@@ -13,25 +13,30 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet"></head>
 <body>
+<audio controls autoplay>
+	<source src="comeAsYouAre.mp3" type="audio/mpeg" style="position: fixed; z-index: 9000"></audio>
+<div class="w3-display-topright w3-large w3-hide-medium w3-hide-large" style="position: fixed; z-index: 9999; color: pink; font-family: 'Spicy-Rice'">Party Sept 23rd 7pm<br>1502 Waller</div>
 	<div id="nav">
-<div class="w3-display-topleft w3-padding-large w3-lime w3-xlarge" style="font-family: 'Spicy-Rice', cursive;">
+
+<div class="w3-display-topright w3-padding-large w3-lime w3-xlarge w3-hide-small" style="font-family: 'Spicy-Rice', cursive;">
     Slack or Email Any Questions to me apekearo@gmail.com
   </div>
 
+
   <br>
   <div class="w3-display-left">
-    <h1 class="w3-xlarge w3-center w3-amber w3-animate-top" style="font-family: 'Spicy-Rice', cursive;" style="color: yellow;">UT BtCamp Party<br>1502 Waller<br>7pm Sept 23rd</h1>
+    <h1 class="w3-xlarge w3-center w3-hide-small w3-amber w3-animate-top" style="font-family: 'Spicy-Rice', cursive;" style="color: yellow;">UT BtCamp Party<br>1502 Waller<br>7pm Sept 23rd</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     
-    <p class="w3-xlarge w3-center w3-deep-orange" id="demo" style="font-family: 'Spicy-Rice', cursive;" style="color: yellow;"></p>
+    <p class="w3-xlarge w3-center w3-hide-small w3-deep-orange" id="demo" style="font-family: 'Spicy-Rice', cursive;" style="color: yellow;"></p>
   </div>
 
-
-<div class="w3-display-middle"><a href="https://www.thatdamnedband.com" target="_blank"><img src="band3.jpg" width="205" height="195" class="w3-hover-greyscale" title="That Damned Band!!"></a>
+<div class="w3-display-middle w3-hide-small"><a href="https://www.thatdamnedband.com" target="_blank"><img src="band3.jpg" width="205" height="195" class="w3-hover-greyscale" title="That Damned Band!!"></a>
  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwju4paDj8jUAhXn8YMKHUrSCakQtwIIKzAB&url=https%3A%2F%2Fwww.theguardian.com%2Ftravel%2Fvideo%2F2012%2Foct%2F17%2Fginnys-little-longhorn-chicken-shit-bingo-austin-video&usg=AFQjCNHFqk7Bc5C2iwy9_69NJu81Y79tCQ&sig2=jWAr2N3uFEVzVZeEB_thJg" target="_blank"> <img src="chicken.jpg" width="195" height="195" class="w3-hover-opacity" title="Chicken Shit Bingo Yall!!"></a>
-  <img src="band4.00_jpg_srz" width="205" height="195" class="w3-hover-sepia">
-  <div class="w3-display-right w3-padding-small" title="A Good Time To Celebrate A Good Accomplishment!"></div></div>
-  <div class="w3-display-right">
+  <img src="tagging.jpg" width="205" height="195" class="w3-hover-sepia" title="We Can Spray Paint My House!">
+  </div>
+
+  <div class="w3-display-right w3-hide-small">
     <iframe class="w3-grayscale-max" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.649350360013!2d-97.73199022062946!3d30.275570614661415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5bd46aa303f%3A0x8513b9eae144e36d!2s1502+Waller+St%2C+Austin%2C+TX+78702!5e0!3m2!1sen!2sus!4v1497475049009" width="265" height="265" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
   		<div class="buttons">
@@ -114,10 +119,13 @@ var x = setInterval(function() {
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
   
     
     // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "<br>days<br> " + hours + "<br>hours " + "<br>Away!!";
+    document.getElementById("demo").innerHTML = days + " days<br>" + hours + " hours<br>" + minutes + " minutes<br>" + "Away!!";
     
     // If the count down is over, write some text 
     if (distance < 0) {
